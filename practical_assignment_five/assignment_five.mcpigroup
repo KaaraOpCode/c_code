@@ -1,0 +1,7 @@
+[PROJECTS]
+Count=3
+Project0=..\practical_assignment_four\assignment_four.mcppi
+Project1=MyProject.mcppi
+Project2=assignment_five.mcppi
+[ActiveProject]
+Index=2
