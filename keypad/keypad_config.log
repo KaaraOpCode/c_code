@@ -1,0 +1,8 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"C:\Users\kaara\Documents\mikros4\keypad_config.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\kaara\Documents\mikros4\" -SP"C:\Users\kaara\Documents\mikros4\keypad\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "keypad_config.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+diagnostics: 0	122	Compilation Started	keypad_config.c
+diagnostics: 36	123	Compiled Successfully	keypad_config.c
+diagnostics: 0	127	All files Compiled in 188 ms	 
+diagnostics: 0	125	Project Linked Successfully	keypad_config.mcppi
+diagnostics: 0	128	Linked in 78 ms	 
+diagnostics: 0	129	Project 'keypad_config.mcppi' completed: 297 ms	 
+diagnostics: 0	103	Finished successfully: 28 Feb 2024, 10:13:36	keypad_config.mcppi

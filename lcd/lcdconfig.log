@@ -1,0 +1,11 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"C:\Users\kaara\Documents\mikros4\lcd\lcdconfig.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\kaara\Documents\mikros4\lcd\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "lcdconfig.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	lcdconfig.c
+diagnostics: 24	123	Compiled Successfully	lcdconfig.c
+diagnostics: 0	127	All files Compiled in 62 ms	 
+hint: 0	1144	Used RAM (bytes): 19 (5%)  Free RAM (bytes): 333 (95%)	Used RAM (bytes): 19 (5%)  Free RAM (bytes): 333 (95%)
+hint: 0	1144	Used ROM (program words): 300 (4%)  Free ROM (program words): 7892 (96%)	Used ROM (program words): 300 (4%)  Free ROM (program words): 7892 (96%)
+diagnostics: 0	125	Project Linked Successfully	lcdconfig.mcppi
+diagnostics: 0	128	Linked in 78 ms	 
+diagnostics: 0	129	Project 'lcdconfig.mcppi' completed: 156 ms	 
+diagnostics: 0	103	Finished successfully: 14 Feb 2024, 10:35:24	lcdconfig.mcppi
