@@ -1,0 +1,111 @@
+unsigned char kp, input[9],num1, num2, optr, clm;
+char keypadPort at PORTB;
+float sum;
+
+sbit LCD_EN at RD5_bit;
+sbit LCD_RS at RD4_bit;
+sbit LCD_D4 at RD0_bit;
+sbit LCD_D5 at RD1_bit;                   `1
+sbit LCD_D6 at RD2_bit;
+sbit LCD_D7 at RD3_bit;
+
+sbit LCD_RS_Direction at TRISD4_bit;
+sbit LCD_EN_Direction at TRISD5_bit;
+sbit LCD_D4_Direction at TRISD0_bit;
+sbit LCD_D5_Direction at TRISD1_bit;
+sbit LCD_D6_Direction at TRISD2_bit;
+sbit LCD_D7_Direction at TRISD3_bit;
+
+void clrScrn ()                                  //function for clearing screen
+{
+ lcd_cmd (_lcd_clear);
+}
+
+void keyWait ()
+ {
+  kp = 0;
+  do {
+      kp = keypad_key_click ();             //copy key press into tym [0]
+      delay_ms(20);
+     }
+  while( kp == 0);                              //loop till key is press
+ }
+
+void main()
+{
+ Keypad_init();                           // Initialize Keypad
+ lcd_init ();                             // Initialize lcd
+ lcd_cmd (_lcd_cursor_off);
+
+ portc = porta = portb = 0;
+ ansel = anselh = 0;                     //all analog I/O as digital
+ trisb = 0xff;
+ trisA = 0x00;
+  trisC = 0x00;
+   //trisD = 0x00;                          //portB as input
+ clm = 9;
+ //lcd_out (1,1,"CALCULATOR");
+
+ while (1)
+ {
+   while(clm <= 14 )
+     {
+
+
+       keyWait ();
+       switch (kp)
+       {
+           case  1: kp = 49; break; // 1
+           case  2: kp = 50; break; // 2
+           case  3: kp = 51; break; // 3
+           case  4: kp = 47; break; // /
+           case  5: kp = 52; break; // 4
+           case  6: kp = 53; break; // 5
+           case  7: kp = 54; break; // 6
+           //case  8: kp = 42; break; // *
+           case  9: kp = 55; break; // 7
+           case 10: kp = 56; break; // 8
+           case 11: kp = 57; break; // 9
+           //case 12: kp = 45; break; // -
+           //case 13: kp = 127; break; // del
+           case 14: kp = 48; break; // 0
+           //case 15: kp = 61; break; // # (=)
+           //case 16: kp = 43; break; // +
+       }
+       if(clm == 100)
+         {
+           clrScrn ();
+           input[1] = input[0] = 0;
+         }
+       lcd_chr(1,clm,kp);
+       if(kp >41 && kp < 48) {clm =11;
+                              optr = kp;
+                              }
+       if(clm < 11 )
+         {
+          input[1]= input[0];
+          input[0] = kp - 48;
+          //lcd_chr(2,1, (input[0] +48));
+         }
+
+       if (clm == 11) {num1 = input[1]*10 + input[0];   input[1] = input[0] = 0; }
+       if (kp == 61){
+                      num2 = input[1] * 10 + input[0];
+                      if(optr == 42)   sum = num1 * num2;
+                      if(optr == 43)   sum = num1 + num2;
+                      if(optr == 45)   sum = num1 - num2;
+                      if(optr == 47)   sum = num1 / num2;
+                      clm = 8;
+                      floatTostr(sum,input);
+                      lcd_out(2,9,input);
+;
+                     }
+       if(clm >= 12) {
+                       input[1] = input[0];
+                       input[0] = kp - 48;
+                      // lcd_chr(2,4,(input[0] + 48));
+                     }
+        clm++;
+     }
+  }
+}

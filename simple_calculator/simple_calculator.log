@@ -1,0 +1,18 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"C:\Users\kaara\Documents\mikros4\simple_calculator\simple_calculator.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\kaara\Documents\mikros4\simple_calculator\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "simple_calculator.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Keypad4x4.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl"	 
+hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
+diagnostics: 0	122	Compilation Started	simple_calculator.c
+error: 96	402	; expected, but 'opt' found	simple_calculator.c
+error: 97	424	'}' expected ';' found	simple_calculator.c
+error: 116	371	Specifier needed	simple_calculator.c
+error: 116	396	Invalid declarator expected'(' or identifier	simple_calculator.c
+error: 118	300	Syntax Error: ')' expected,  but '==' found	simple_calculator.c
+error: 120	402	; expected, but '=' found	simple_calculator.c
+error: 120	393	'opt' Identifier redefined	simple_calculator.c
+error: 120	371	Specifier needed	simple_calculator.c
+error: 120	396	Invalid declarator expected'(' or identifier	simple_calculator.c
+error: 120	324	Undeclared identifier 'kp1' in expression	simple_calculator.c
+error: 121	371	Specifier needed	simple_calculator.c
+error: 121	396	Invalid declarator expected'(' or identifier	simple_calculator.c
+error: 122	300	Syntax Error: ')' expected,  but '==' found	simple_calculator.c
+error: 123	312	Internal error ''	simple_calculator.c
+error: 0	102	Finished (with errors): 14 Mar 2024, 12:59:42	simple_calculator.mcppi

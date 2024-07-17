@@ -1,0 +1,13 @@
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F887 -DL -O11111114 -fo8 -N"C:\Users\kaara\Documents\mikros4\test1\test1.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\kaara\Documents\mikros4\test1\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "test1.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
+diagnostics: 0	122	Compilation Started	test1.c
+error: 28	324	Undeclared identifier 'Keypad_Key_Click' in expression	test1.c
+error: 98	324	Undeclared identifier 'Keypad_Init' in expression	test1.c
+error: 101	324	Undeclared identifier 'Lcd_Init' in expression	test1.c
+error: 102	324	Undeclared identifier 'Lcd_Cmd' in expression	test1.c
+error: 103	324	Undeclared identifier 'Lcd_Cmd' in expression	test1.c
+error: 114	324	Undeclared identifier 'LCD_CHR_CP' in expression	test1.c
+error: 119	324	Undeclared identifier 'LCD_CHR_CP' in expression	test1.c
+error: 123	324	Undeclared identifier 'LCD_CHR_CP' in expression	test1.c
+error: 125	324	Undeclared identifier 'LCD_CHR_CP' in expression	test1.c
+error: 146	324	Undeclared identifier 'LCD_OUT_CP' in expression	test1.c
+error: 0	102	Finished (with errors): 14 Mar 2024, 12:41:12	test1.mcppi
